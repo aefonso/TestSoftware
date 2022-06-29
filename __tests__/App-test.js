@@ -35,7 +35,24 @@ describe('Testando Operações', () => {
 
 
         //expect(getByText("30")).toBeTruthy();
+
         // Lista de dados comparando se tem 2 elementos do mesmo valor
         expect(getAllByText("30").length).toBe(1);
+    })
+
+    it('Teste de Dobro Negativo', () => {
+        const {getByTestId, getByText, getAllByText} = render(<App />);
+
+        const campoEntrada = getByTestId("Entrada");
+        fireEvent.changeText(campoEntrada, -15);
+       
+        const botao = getByTestId("calcular");
+        fireEvent.press(botao);
+
+
+        //expect(getByText("30")).toBeTruthy();
+        
+        // Lista de dados comparando se tem 2 elementos do mesmo valor
+        expect(getAllByText("-30").length).toBe(1);
     })
 })
