@@ -27,6 +27,7 @@ exports[`Teste de Snapshot Snapshot de App 1`] = `
         "opacity": 1,
       }
     }
+    testID="calcular"
   >
     <View
       style={
@@ -51,7 +52,9 @@ exports[`Teste de Snapshot Snapshot de App 1`] = `
       </Text>
     </View>
   </View>
-  <Text>
+  <Text
+    testID="resultado"
+  >
     0
   </Text>
 </View>

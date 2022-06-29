@@ -16,9 +16,9 @@ export default () => {
 
     <TextInput placeholder='Digite um número' onChangeText={setNumero} testID="Entrada"/>
 
-    <Button title="Calcular dobro" onPress={calcularDobro}/>
+    <Button title="Calcular dobro" onPress={calcularDobro} testID="calcular" />
 
-    <Text>{dobro}</Text>
+    <Text testID="resultado">{dobro}</Text>
   </View>
   )
 }

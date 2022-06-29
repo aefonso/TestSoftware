@@ -16,6 +16,8 @@ describe('Teste de Componentes', () => {
        // const textoInicial = getByText("Cálculo do Dobro");
         //const textoInicial = getByTestId("Entrada");
         expect(getByTestId("Entrada")).toBeDefined();
+        expect(getByTestId("calcular")).toBeDefined();
+        expect(getByTestId("resultado")).toBeDefined();
         //expect(textoInicial).toBeDefined();
         // Solucao 2//expect(textoInicial).toBeThruthy();
     })
