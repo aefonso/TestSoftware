@@ -1,3 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Teste de Snapshot Snapshot de App 1`] = `"<App/"`;
+exports[`Teste de Snapshot Snapshot de App 1`] = `
+<View>
+  <Text>
+    Cálculo do Dobro
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Digite um número"
+  />
+  <View
+    accessibilityRole="button"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Calcular dobro
+      </Text>
+    </View>
+  </View>
+  <Text>
+    0
+  </Text>
+</View>
+`;
