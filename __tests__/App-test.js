@@ -25,7 +25,7 @@ describe('Teste de Componentes', () => {
 
 describe('Testando Operações', () => {
     it('Teste de Dobro Positivo', () => {
-        const {getByTestId, getByText} = render(<App />);
+        const {getByTestId, getByText, getAllByText} = render(<App />);
 
         const campoEntrada = getByTestId("Entrada");
         fireEvent.changeText(campoEntrada, 15);
@@ -33,6 +33,9 @@ describe('Testando Operações', () => {
         const botao = getByTestId("calcular");
         fireEvent.press(botao);
 
-        expect(getByText("30")).toBeTruthy();
+
+        //expect(getByText("30")).toBeTruthy();
+        // Lista de dados comparando se tem 2 elementos do mesmo valor
+        expect(getAllByText("30").length).toBe(1);
     })
 })
