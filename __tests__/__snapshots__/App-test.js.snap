@@ -8,7 +8,7 @@ exports[`Teste de Snapshot Snapshot de App 1`] = `
   <TextInput
     onChangeText={[Function]}
     placeholder="Digite um número"
-    testID="entrada"
+    testID="Entrada"
   />
   <View
     accessibilityRole="button"
