@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import {render} from '@testing-library/react-native'
+import {render, fireEvent} from '@testing-library/react-native'
 import App from '../App';
 
 describe('Teste de Snapshot', () => {
@@ -19,6 +19,20 @@ describe('Teste de Componentes', () => {
         expect(getByTestId("calcular")).toBeDefined();
         expect(getByTestId("resultado")).toBeDefined();
         //expect(textoInicial).toBeDefined();
-        // Solucao 2//expect(textoInicial).toBeThruthy();
+        // Solucao 2//expect(textoInicial).toBeTruthy();
+    })
+})
+
+describe('Testando Operações', () => {
+    it('Teste de Dobro Positivo', () => {
+        const {getByTestId, getByText} = render(<App />);
+
+        const campoEntrada = getByTestId("Entrada");
+        fireEvent.changeText(campoEntrada, 15);
+       
+        const botao = getByTestId("calcular");
+        fireEvent.press(botao);
+
+        expect(getByText("30")).toBeTruthy();
     })
 })
