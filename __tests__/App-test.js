@@ -11,9 +11,10 @@ describe('Teste de Snapshot', () => {
 
 describe('Teste de Componentes', () => {
     it('Teste de Componentes de App', () => {
-        const { getByText } = render(<App />);
+        const { getByText, getByTestId } = render(<App />);
 
-        const textoInicial = getByText("Cálculo do Dobro");
+       // const textoInicial = getByText("Cálculo do Dobro");
+       const textoInicial = getByTestId("entrada")
         expect(textoInicial).toBeDefined();
         // Solucao 2//expect(textoInicial).toBeThruthy();
     })
